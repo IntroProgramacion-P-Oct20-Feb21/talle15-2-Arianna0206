@@ -5,10 +5,24 @@
  */
 package paquetetres;
 
+import java.util.Formatter;
+
 /**
  *
  * @author reroes
  */
 public class EscribirArchivo {
     
+    public static void agregarRegistros(String valor) {
+        try {
+            Formatter salida = new Formatter("data/Biblioteca.txt");
+            salida.format("%s\n", valor);
+            salida.close();
+
+        } catch (Exception e) {
+            System.err.println("Error al crear el archivo.");
+            System.exit(1); 
+
+        }
+    }
 }

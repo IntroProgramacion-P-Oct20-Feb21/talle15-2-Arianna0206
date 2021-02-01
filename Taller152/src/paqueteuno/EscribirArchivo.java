@@ -5,7 +5,9 @@
  */
 package paqueteuno;
 
-import paquetetres.*;
+import java.util.Formatter;
+
+
 
 /**
  *
@@ -13,4 +15,19 @@ import paquetetres.*;
  */
 public class EscribirArchivo {
     
+    public static void agregarRegistros(String valor) {
+        try {
+            Formatter salida = new Formatter("data/Capitales.txt");
+            salida.format("%s\n", valor);
+            salida.close();
+
+        } catch (Exception e) {
+            System.err.println("Error al crear el archivo.");
+            System.exit(1); 
+
+        }
+    
+    
+
+}
 }
